@@ -1,115 +1,75 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@ARTICLE{10504267,
+    author={Sutter, Thomas and Kehrer, Timo and Rennhard, Marc and Tellenbach, Bernhard and Klein, Jacques},
+    journal={IEEE Access},
+    title={Dynamic Security Analysis on Android: A Systematic Literature Review},
+    year={2024},
+    volume={12},
+    number={},
+    pages={57261-57287},
+    keywords={Security;Codes;Operating systems;Fuzzing;Taxonomy;Systematics;Androids;Software testing;Machine learning;Monitoring;Instrumentation and measurement;Android;dynamic analysis;security;software testing;vulnerabilities;instrumentation;fuzzing;monitoring;tracing;machine learning},
+    doi={10.1109/ACCESS.2024.3390612},
+    abstract={Dynamic analysis is a technique that is used to fully understand the internals of a system at runtime. On Android, dynamic security analysis involves real-time assessment and active adaptation of an app’s behaviour, and is used for various tasks, including network monitoring, system-call tracing, and taint analysis. The research on dynamic analysis has made significant progress in the past years. However, to the best of our knowledge, there is a lack in secondary studies that analyse the novel ideas and common limitations of current security research. The main aim of this work is to understand dynamic security analysis research on Android to present the current state of knowledge, highlight research gaps, and provide insights into the existing body of work in a structured and systematic manner. We conduct a systematic literature review (SLR) on dynamic security analysis for Android. The systematic review establishes a taxonomy, defines a classification scheme, and explores the impact of advanced Android app testing tools on security solutions in software engineering and security research. The study’s key findings centre on tool usage, research objectives, constraints, and trends. Instrumentation and network monitoring tools play a crucial role, with research goals focused on app security, privacy, malware detection, and software testing automation. Identified limitations include code coverage constraints, security-related analysis obstacles, app selection adequacy, and non-deterministic behaviour. Our study results deepen the understanding of dynamic analysis in Android security research by an in-depth review of 43 publications. The study highlights recurring limitations with automated testing tools and concerns about detecting or obstructing dynamic analysis.},
+    google_scholar_id={YsMSGLbcyi4C},
+    pdf = {https://doi.org/10.1109/ACCESS.2024.3390612},
+    url = {https://ieeexplore.ieee.org/abstract/document/10504267},
+    bibtex_show={true},
+    preview = {survey_android.png},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+
+@INPROCEEDINGS{10172951,
+    author={Sutter, Thomas and Tellenbach, Bernhard},
+    booktitle={2023 IEEE/ACM 10th International Conference on Mobile Software Engineering and Systems (MOBILESoft)},
+    title={FirmwareDroid: Towards Automated Static Analysis of Pre-Installed Android Apps},
+    year={2023},
+    volume={},
+    number={},
+    pages={12-22},
+    keywords={Privacy;Supply chains;Static analysis;Malware;Security;Advertising;Task analysis;Android Firmware;Pre-Installed Apps;Static Analysis;Security;Vulnerability},
+    doi={10.1109/MOBILSoft59058.2023.00009},
+    abstract={Supply chain attacks are an evolving threat to the IoT and mobile landscape. Recent malware findings have shown that even sizeable mobile phone vendors cannot defend their operating systems fully against pre-installed malware. Detecting and mitigating malware and software vulnerabilities on Android firmware is a challenging task requiring expertise in Android internals, such as customised firmware formats. Moreover, as users cannot choose what software is pre-installed on their devices, there is a fundamental lack of transparency and control. To make Android firmware analysis more accessible and regain some transparency, we present FirmwareDroid, a novel open-source security framework for Android firmware analysis that automates the extraction and analysis of pre-installed software.FirmwareDroid streamlines the process of software extraction from Android firmware for static security and privacy assessments. With FirmwareDroid, we lay the groundwork for researchers to automate the security assessment of Android firmware at scale, and we demonstrated the capabilities of FirmwareDroid by analysing 5,728 Android firmware samples from various vendors. We analysed 75,141 unique pre-installed Android applications to study how common advertising tracker libraries (a piece of software that collects user usage data) are used and which permissions pre-installed Android apps inherit. We conclude that 20.53% of all apps in our dataset include advertising trackers and that 88.14% of all used permissions are signature-based.},
+    google_scholar_id={Tyk-4Ss8FVUC},
+    pdf = {https://doi.org/10.1109/MOBILSoft59058.2023.00009},
+    url = {https://ieeexplore.ieee.org/abstract/document/10172951},
+    bibtex_show={true},
+    preview = {fmd-static.png},
+ }
+
+
+@ARTICLE{9893815,
+    author={Sutter, Thomas and Bozkir, Ahmet Selman and Gehring, Benjamin and Berlich, Peter},
+    journal={IEEE Access},
+    title={Avoiding the Hook: Influential Factors of Phishing Awareness Training on Click-Rates and a Data-Driven Approach to Predict Email Difficulty Perception},
+    year={2022},
+    volume={10},
+    number={},
+    pages={100540-100565},
+    keywords={Phishing;Training data;Human factors;Estimation ;Predictive models;Machine learning;Security;Human computer interaction;Difficulty estimation;human-centered;machine learning;phishing awareness;susceptibility;phishing attack simulations},
+    doi={10.1109/ACCESS.2022.3207272},
+    abstract={Phishing attacks are still seen as a significant threat to cyber security, and large parts of the industry rely on anti-phishing simulations to minimize the risk imposed by such attacks. This study conducted a large-scale anti-phishing training with more than 31000 participants and 144 different simulated phishing attacks to develop a data-driven model to classify how users would perceive a phishing simulation. Furthermore, we analyze the results of our large-scale anti-phishing training and give novel insights into users’ click behavior. Analyzing our anti-phishing training data, we find out that 66% of users do not fall victim to credential-based phishing attacks even after being exposed to twelve weeks of phishing simulations. To further enhance the phishing awareness-training effectiveness, we developed a novel manifold learning-powered machine learning model that can predict how many people would fall for a phishing simulation using the several structural and state-of-the-art NLP features extracted from the emails. In this way, we present a systematic approach for the training implementers to estimate the average “convincing power” of the emails prior to rolling out. Moreover, we revealed the top-most vital factors in the classification. In addition, our model presents significant benefits over traditional rule-based approaches in classifying the difficulty of phishing simulations. Our results clearly show that anti-phishing training should focus on the training of individual users rather than on large user groups. Additionally, we present a promising generic machine learning model for predicting phishing susceptibility.},
+    google_scholar_id={2osOgNQ5qMEC},
+    pdf = {https://doi.org/10.1109/ACCESS.2022.3207272},
+    url = {https://ieeexplore.ieee.org/document/9893815},
+    bibtex_show={true},
+    preview = {optiphish.png},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@article{jampen2020don,
+    title={Don’t click: towards an effective anti-phishing training. A comparative literature review},
+    author={Jampen, Daniel and G{\"u}r, G{\"u}rkan and Sutter, Thomas and Tellenbach, Bernhard},
+    journal={Human-centric Computing and Information Sciences},
+    volume={10},
+    number={1},
+    pages={33},
+    year={2020},
+    publisher={Springer},
+    abstract={Email is of critical importance as a communication channel for both business and personal matters. Unfortunately, it is also often exploited for phishing attacks. To defend against such threats, many organizations have begun to provide anti-phishing training programs to their employees. A central question in the development of such programs is how they can be designed sustainably and effectively to minimize the vulnerability of employees to phishing attacks. In this paper, we survey and categorize works that consider different elements of such programs via a clearly laid-out methodology, and identify key findings in the technical literature. Overall, we find that researchers agree on the answers to many relevant questions regarding the utility and effectiveness of anti-phishing training. However, we identified influencing factors, such as the impact of age on the success of anti-phishing training programs, for which mixed findings are available. Finally, based on our comprehensive analysis, we describe how a well-founded anti-phishing training program should be designed and parameterized with a set of proposed research directions.},
+    google_scholar_id={u5HHmVD_uO8C},
+    pdf = {https://doi.org/10.1186/s13673-020-00237-7},
+    url = {https://link.springer.com/article/10.1186/s13673-020-00237-7},
+    bibtex_show={true},
+    preview = {survey_phish.png},
 }
