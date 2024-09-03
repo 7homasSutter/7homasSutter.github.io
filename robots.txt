@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://7homasSutter.github.io/sitemap.xml
+Sitemap: https:///7homasSutter.github.io/sitemap.xml
