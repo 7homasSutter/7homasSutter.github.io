@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 I am a PhD Student Computer Science at the <a href='https://www.unibe.ch'>University of Bern</a>. 
-Under the supervision of <a href='https://seg.inf.unibe.ch/people/timo/'>
+Under the supervision of <a href='https://seg.inf.unibe.ch/team/timo-kehrer/'>
 Prof. Dr. Timo Kehrer</a>, I am working on the topic of automated software testing and security analysis of mobile applications. 
 My research interests include software security, software testing, and software engineering. I am also a 
 research associate in the <a href="https://www.zhaw.ch/en/engineering/institutes-centres/init/information-security/">
