@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Information Security Researcher
+subtitle: Software Engineer & Security Researcher
 profile:
   align: right
   image: prof_pic.jpg
