@@ -7,8 +7,8 @@ nav: true
 nav_order: 6
 ---
 
-I am involved in teaching activities at the Zurich University of Applied Sciences (ZHAW) and the University of Bern (UniBe).
-Below is a list of students I have or currently supervise(d) for their thesis or seminar projects. 
+I am actively involved in teaching at the Zurich University of Applied Sciences (ZHAW) and the University of Bern 
+(UniBe). Below is a list of students I have supervised or am currently supervising for their thesis or seminar projects.
 
 **2023:**
 
