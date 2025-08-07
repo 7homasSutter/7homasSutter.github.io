@@ -44,7 +44,15 @@
       "startDate": "2017-11-01",
       "endDate": "2021-03-31",
       "summary": "Research Associate at the Institute of Computer Science (InIT) at Zurich University of Applied Sciences (ZHAW).",
-      "highlights": ["Penetration Testing", "Security Audits", "Machine Learning", "Information Security", "Cryptography", "Mobile Computing", "Software Engineering"]
+      "highlights": [
+        "Penetration Testing",
+        "Security Audits",
+        "Machine Learning",
+        "Information Security",
+        "Cryptography",
+        "Mobile Computing",
+        "Software Engineering"
+      ]
     }
   ],
   "volunteer": [
@@ -80,7 +88,15 @@
       "startDate": "2018-01-01",
       "endDate": "2021-03-31",
       "score": "5.4",
-      "courses": ["Machine Learning", "Advanced Software Engineering", "Information Security", "Mobile Computing", "Software Engineering", "Mathematics", "Statistics"]
+      "courses": [
+        "Machine Learning",
+        "Advanced Software Engineering",
+        "Information Security",
+        "Mobile Computing",
+        "Software Engineering",
+        "Mathematics",
+        "Statistics"
+      ]
     },
     {
       "institution": "University of Bern, Bern, Switzerland",
@@ -91,7 +107,15 @@
       "startDate": "2023-08-01",
       "endDate": "2026-12-31",
       "score": "",
-      "courses": ["Machine Learning", "Advanced Software Engineering", "Information Security", "Mobile Computing", "Software Engineering", "Mathematics", "Statistics"]
+      "courses": [
+        "Machine Learning",
+        "Advanced Software Engineering",
+        "Information Security",
+        "Mobile Computing",
+        "Software Engineering",
+        "Mathematics",
+        "Statistics"
+      ]
     }
   ],
   "awards": [
@@ -157,8 +181,17 @@
     {
       "name": "Cyber Security",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Red Teaming", "Penetration Testing", "Security Audits", "Cryptography", "Machine Learning",
-      "Reverse Engineering", "Web Security", "Network Security", "Mobile Security"]
+      "keywords": [
+        "Red Teaming",
+        "Penetration Testing",
+        "Security Audits",
+        "Cryptography",
+        "Machine Learning",
+        "Reverse Engineering",
+        "Web Security",
+        "Network Security",
+        "Mobile Security"
+      ]
     },
     {
       "name": "Hiking",
@@ -181,9 +214,7 @@
       "keywords": ["Thurgauer Schildpatt"]
     }
   ],
-  "references": [
-
-  ],
+  "references": [],
   "projects": [
     {
       "name": "SeCoSS: Secure Collaboration with SecureSafe",
@@ -196,7 +227,14 @@
     {
       "name": "HostDetective – Next Generation Active and Passive Web Server Rating System",
       "summary": "This project extends Exeon Analytics' ExeonTrace product with HostDetective Next Generation (HD.ng), a tool to identify and mitigate Web-related data breaches. HD.ng implements a novel active and passive Web server assessment method to determine the type, purpose and risk score of a Web server. This project builds on the results of the HostDetective project.",
-      "highlights": ["Network Security", "Anomaly Detection", "Machine Learning", "Web Security", "Web Server Fingerprinting", "Web Server Classification"],
+      "highlights": [
+        "Network Security",
+        "Anomaly Detection",
+        "Machine Learning",
+        "Web Security",
+        "Web Server Fingerprinting",
+        "Web Server Classification"
+      ],
       "startDate": "2021-01-01",
       "endDate": "2022-12-31",
       "url": "https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3125/"
@@ -204,7 +242,14 @@
     {
       "name": "OptiPhish – Effective and Measurable Phishing Awareness Training",
       "summary": "In this project, LUCY - a system for phishing awareness training - will be significantly extended in order to put such training on a scientific basis and to bring it to a new level of quality. The goal is to provide completely automated, effective and individualized phishing awareness training with measurable training effect. The project will last two years and is being carried out jointly by InIT and Lucy Security AG.",
-      "highlights": ["Scientific Project Management", "Phishing Awareness Training", "Phishing Simulation", "Phishing Campaigns", "Phishing Metrics", "Phishing Training Effectiveness"],
+      "highlights": [
+        "Scientific Project Management",
+        "Phishing Awareness Training",
+        "Phishing Simulation",
+        "Phishing Campaigns",
+        "Phishing Metrics",
+        "Phishing Training Effectiveness"
+      ],
       "startDate": "2021-01-01",
       "endDate": "2022-12-31",
       "url": "https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3151/"
