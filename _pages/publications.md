@@ -10,6 +10,7 @@ nav_order: 1
 <h2>Talks</h2>
 Some of the public talks I've given in the past:
 
+- [Workshop for the Swiss-African Cybersecurity Community](https://www.fhnw.ch/plattformen/swissafricacysec/cyber-resilience-and-incident-response-in-africas-digital-economy-2/) Security and Privacy Concerns on Android Phones
 - [OWASP Switzerland Chapter Meeting](https://www.meetup.com/owaspswitzerland/events/305296964/) (2025): [Uninstallable by Design](https://github.com/7homasSutter/public-slides/tree/main): The Role of Pre-installed Apps in Android’s Security Landscape
 - [IEEE Computer Society, Madras, Computer Security Day](https://infoforuse.blogspot.com/2024/11/) (2024): Uninstallable by Design: The Role of Pre-installed Apps in Android’s Security Landscape
 - [Global Cyber Conference](https://globalcyberconference.com/) (2023): Avoiding the Hook: Phishing Awareness
