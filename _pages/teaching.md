@@ -15,12 +15,14 @@ I am actively involved in teaching at the Zurich University of Applied Sciences 
 [University of Bern (UniBe):](https://www.unibe.ch)
 
 - Seminar + Master Thesis: Dario Kaufmann - Detecting Third-Party Libraries in Android Applications at Runtime + Feasibility of Runtime Detection of Third-Party Libraries in Android Applications
-- Master Thesis: Julien Pierre Brunner - Experimenting with eBPF on the Android Emulator
+- Seminar + Master Thesis: Julien Pierre Brunner - Experimenting with eBPF on the Android Emulator
 - Seminar + Bachelor Thesis: Yannik Stürmlin - An Investigation Of Location Privacy In Mobile Applications
 - Seminar + Bachelor Thesis: Rahel Baumann - Automated Blackbox UI-Testing for Android Apps
-- Bachelor Thesis: Dominic Fabian Kronig - Creating a Vulnerable Reference App for the OWASP Mobile Security Testing Guide
-- Seminar Sophie Maudonnet - Third-Party Libraries Detection in Android Applications with Static Analysis Tools
-- Seminar Sinthuja Vijayananthan - An Investigation Of Location Privacy In Mobile Applications
+- Seminar + Bachelor Thesis: Dominic Fabian Kronig - Development of a Reference Application for the OWASP Mobile Application Security Testing Guide (MASTG)
+- Seminar: Felix Merz - Creating a Core Rule Set for Android Taint Analysis Tools
+- Seminar: Clement Defossez - Creating a Core Rule Set for Android Taint Analysis Tools
+- Seminar: Sophie Maudonnet - Third-Party Libraries Detection in Android Applications with Static Analysis Tools
+- Seminar: Sinthuja Vijayananthan - An Investigation Of Location Privacy In Mobile Applications
 
 [Zurich University of Applied Sciences (ZHAW):](https://www.zhaw.ch)
 
