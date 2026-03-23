@@ -58,8 +58,8 @@ I am actively involved in teaching at the Zurich University of Applied Sciences 
 
 [Swiss Federal Institute of Technology Zurich (ETHZ):](https://www.ethz.ch)
 
-- Master Thesis: Sarina Müller
-- Master Thesis: Yufei Zhang
+- Master Thesis: Sarina Müller - Android App Classification via Analysis of Network Traffic
+- Master Thesis: Yufei Zhang - Analyzing and Mitigating Roadblocks in Dynamic Analysis of Mobile Applications
 
 [Eastern Switzerland University of Applied Sciences (OST):](https://www.ost.ch)
 
