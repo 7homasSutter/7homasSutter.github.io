@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Software Engineer & Security Researcher
+subtitle: Software Engineer & Information Security Researcher
 profile:
   align: right
   image: prof_pic.jpg
@@ -11,9 +11,10 @@ profile:
     <p>PhD Student Computer Science</p>
     <p>Switzerland, Zurich Area</p>
 
-news: false # includes a list of news items
+news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+nav_order: 0
 ---
 
 I am a PhD Student Computer Science at the <a href='https://www.unibe.ch'>University of Bern</a>.

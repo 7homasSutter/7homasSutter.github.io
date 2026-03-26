@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+<article class="course-page">
+  <header>
+    <p class="course-meta">
+      {% if page.year %}{{ page.year }}{% elsif page.term %}{{ page.term }}{% endif %}
+      {% if page.level %} &middot; {{ page.level }}{% endif %}
+      {% if page.university %}
+        &middot; <a href="{{ page.university_url | default: page.university_link | default: '#' }}">{{ page.university }}</a>
+      {% endif %}
+      {% if page.instructor %} &middot; Instructor(s): {{ page.instructor }}{% endif %}
+    </p>
+    {% if page.excerpt %}
+      <p class="course-excerpt">{{ page.excerpt }}</p>
+    {% endif %}
+  </header>
+
+  <section class="course-content">
+    {{ content }}
+  </section>
+
+  <footer class="course-footer">
+    {% if page.slides %}<p>Slides: <a href="{{ page.slides }}">{{ page.slides }}</a></p>{% endif %}
+    {% if page.repository %}<p>Repository: <a href="{{ page.repository }}">{{ page.repository }}</a></p>{% endif %}
+  </footer>
+</article>
+

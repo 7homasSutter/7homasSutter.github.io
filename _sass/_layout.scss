@@ -46,8 +46,121 @@ body.sticky-bottom-footer {
 
 // TODO: redefine publications layout.
 
+/* Ensure publication preview images and figure includes don't overlap text by
+   constraining their width to their container and centering them. This
+   fixes cases where images used in the publications list overflow the left
+   column and visually overlap the description. */
+.figure-zoom-wrapper {
+  display: flex;          /* keep the include's centering behaviour */
+  justify-content: center;
+}
+.figure-zoom-wrapper img,
+.publications img.preview,
+.preview {
+  max-width: 100%;        /* never exceed container width */
+  height: auto;           /* preserve aspect ratio */
+  display: block;         /* avoid inline spacing/overlap */
+  margin-left: auto;
+  margin-right: auto;     /* center within column */
+}
+
+/* Add a small bottom margin so figures don't collide with adjacent text */
+figure {
+  margin: 0 0 0.75rem 0;
+}
+
+
+
 /*****************************************************************************
 * Projects
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+
+/*****************************************************************************
+ * Page table layout adjustments
+ * Increase vertical spacing between tables and give the second column
+ * (used for 'Level' in teaching tables) more room while remaining
+ * responsive on small screens.
+ *****************************************************************************/
+
+.post table {
+  width: 100%;
+  margin-bottom: 1.5rem; /* more space between consecutive tables */
+  border-collapse: collapse;
+}
+.post table th,
+.post table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+/* Give the second column (Level) more room; use min-width so it can shrink on small screens */
+.post table th:nth-child(2),
+.post table td:nth-child(2) {
+  min-width: 10rem;
+  width: 12rem;
+  white-space: nowrap;
+}
+
+/* On very small screens, allow wrapping to avoid overflow */
+@media (max-width: 576px) {
+  .post table th:nth-child(2),
+  .post table td:nth-child(2) {
+    min-width: auto;
+    width: auto;
+    white-space: normal;
+  }
+}
+
+/* Year divider styling (visible in light and dark themes) */
+.year-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.year-divider-line {
+  flex: 1;
+  display: block;
+  /* Use an explicit 1px bar (background) to avoid inconsistent hr/border rendering */
+  height: 1px;
+  min-height: 1px;
+  border: 0;
+  background-color: rgba(0,0,0,0.95);
+  /* ensure the rule has priority in case upstream resets hr */
+  box-shadow: none;
+}
+.year-divider-year {
+  margin: 0;
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+/* Dark mode: use lighter divider color */
+@media (prefers-color-scheme: dark) {
+  .year-divider-line {
+    background-color: rgba(255,255,255,0.12);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .year-divider-line {
+    background-color: rgba(0,0,0,0.95);
+  }
+}
+
+/* Also support explicit theme attribute (some setups toggle data-theme) */
+html[data-theme="dark"] .year-divider-line,
+body[data-theme="dark"] .year-divider-line {
+  background-color: rgba(255,255,255,0.12);
+}
+
+/* Also support explicit theme attribute (some setups toggle data-theme) */
+html[data-theme="light"] .year-divider-line,
+body[data-theme="light"] .year-divider-line {
+  background-color: rgba(0,0,0,0.95);
+}
+
+

@@ -198,6 +198,12 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+  talks:
+    output: true
+    permalink: /talks/:title/
+  courses:
+    output: true
+    permalink: /teaching/courses/:title/
 
 announcements:
   enabled: true
