@@ -57,7 +57,7 @@ If you are a student interested in supervision or project work, please contact m
 | [University of Bern (UniBe)](https://www.unibe.ch) | Florin Luc Achermann | Seminar | SBOM development for Android applications |
 | [ETH Zurich (ETHZ)](https://www.ethz.ch) | Sarina Müller | Master Thesis | Android App Classification via Analysis of Network Traffic |
 | [ETH Zurich (ETHZ)](https://www.ethz.ch) | Yufei Zhang | Master Thesis | Analyzing and Mitigating Roadblocks in Dynamic Analysis of Mobile Applications |
-| [Eastern Switzerland University of Applied Sciences (OST)](https://www.ost.ch) | Miles Strässle (external expert) | Bachelor Thesis (External Expert) | Systematic Identification of Vulnerabilities in C and C++ Source Code through Fuzzing |
+| [Eastern Switzerland University of Applied Sciences (OST)](https://www.ost.ch) | Miles Strässle | Bachelor Thesis (External Expert) | Systematic Identification of Vulnerabilities in C and C++ Source Code through Fuzzing |
 
 <div class="year-divider">
   <hr class="year-divider-line" />
