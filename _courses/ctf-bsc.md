@@ -2,7 +2,7 @@
 layout: course
 title: "Extracurricular course: Practical Cybersecurity Training"
 permalink: /courses/cybersec-ctf/
-year: 2025
+year: 2025 - 2027
 level: BSc
 term: Since 2025
 instructor: "Prof. Ariane Trammell and Thomas Sutter"

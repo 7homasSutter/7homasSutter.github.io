@@ -2,7 +2,7 @@
 layout: course
 title: "Ethical Hacking Course (rEVA_CTF)"
 permalink: /courses/reva-ctf/
-year: 2026
+year: 2026 - 2027
 level: MSc
 term: Spring 2026
 instructor: "Prof. Ariane Trammell and Thomas Sutter"

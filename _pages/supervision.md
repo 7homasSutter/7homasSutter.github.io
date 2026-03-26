@@ -1,6 +1,8 @@
 ---
 layout: page
-permalink: /supvervision/
+permalink: /supervision/
+redirect_from:
+  - /supvervision/
 title: Mentoring & Supervision
 description: "A list of supervised theses and projects at various universities."
 nav: true

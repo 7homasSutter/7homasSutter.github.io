@@ -6,7 +6,7 @@ description: "Courses I teach or assist with"
 nav: true
 nav_order: 5
 ---
-{%- assign courses_sorted = site.courses | where_exp: "c", "c.published != false" | sort: 'title' -%}
+{%- assign courses_sorted = site.courses | where_exp: "c", "c.published != false" | sort: 'year' | reverse -%}
 
 {%- for course in courses_sorted -%}
   <div class="course-item">
