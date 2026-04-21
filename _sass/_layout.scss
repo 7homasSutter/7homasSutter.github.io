@@ -6,6 +6,11 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   h1,
   h2,
@@ -14,7 +19,14 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
+    font-family: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
 }
 
 body.fixed-top-nav {
@@ -35,6 +47,13 @@ body.sticky-bottom-footer {
 .profile {
   img {
     width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    }
   }
 }
 
