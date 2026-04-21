@@ -49,7 +49,7 @@ the users privacy and security at risk. We will show what users can do in
 order to guard themselves against such spyware attacks. Furthermore, we will 
 introduce our solution ideas to detect such spyware on Android.
 
-[1]: Googles Android Oreo Release Notes: https://developer.android.com/about/versions/oreo/background
-[2]: Googles Android Pie Release Notes: https://developer.android.com/about/versions/pie/android-9.0-changes-all
+[1]: https://developer.android.com/about/versions/oreo/background
+[2]: https://developer.android.com/about/versions/pie/android-9.0-changes-all
 
 
