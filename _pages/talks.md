@@ -4,7 +4,7 @@ permalink: /talks/
 title: Talks
 description: A list of selected talks and presentations
 nav: true
-nav_order: 3
+nav_order: 6
 ---
 {% assign talks_sorted = site.talks | sort: 'date' %}
 {% for talk in talks_sorted reversed %}
