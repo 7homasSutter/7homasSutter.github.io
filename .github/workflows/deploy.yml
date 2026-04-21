@@ -85,6 +85,7 @@ jobs:
           bundle lock --add-platform x86_64-linux
       - name: Install and Build 🔧
         run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
           bundle exec jekyll build
