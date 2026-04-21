@@ -6,7 +6,13 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -19,14 +25,26 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
-    font-family: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:
+      "Inter Tight",
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
 
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
 }
 
 body.fixed-top-nav {
@@ -70,17 +88,17 @@ body.sticky-bottom-footer {
    fixes cases where images used in the publications list overflow the left
    column and visually overlap the description. */
 .figure-zoom-wrapper {
-  display: flex;          /* keep the include's centering behaviour */
+  display: flex; /* keep the include's centering behaviour */
   justify-content: center;
 }
 .figure-zoom-wrapper img,
 .publications img.preview,
 .preview {
-  max-width: 100%;        /* never exceed container width */
-  height: auto;           /* preserve aspect ratio */
-  display: block;         /* avoid inline spacing/overlap */
+  max-width: 100%; /* never exceed container width */
+  height: auto; /* preserve aspect ratio */
+  display: block; /* avoid inline spacing/overlap */
   margin-left: auto;
-  margin-right: auto;     /* center within column */
+  margin-right: auto; /* center within column */
 }
 
 /* Add a small bottom margin so figures don't collide with adjacent text */
@@ -88,14 +106,11 @@ figure {
   margin: 0 0 0.75rem 0;
 }
 
-
-
 /*****************************************************************************
 * Projects
 *****************************************************************************/
 
 // TODO: redefine projects layout.
-
 
 /*****************************************************************************
  * Page table layout adjustments
@@ -147,7 +162,7 @@ figure {
   height: 1px;
   min-height: 1px;
   border: 0;
-  background-color: rgba(0,0,0,0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   /* ensure the rule has priority in case upstream resets hr */
   box-shadow: none;
 }
@@ -160,26 +175,24 @@ figure {
 /* Dark mode: use lighter divider color */
 @media (prefers-color-scheme: dark) {
   .year-divider-line {
-    background-color: rgba(255,255,255,0.12);
+    background-color: rgba(255, 255, 255, 0.12);
   }
 }
 
 @media (prefers-color-scheme: light) {
   .year-divider-line {
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0, 0, 0, 0.95);
   }
 }
 
 /* Also support explicit theme attribute (some setups toggle data-theme) */
 html[data-theme="dark"] .year-divider-line,
 body[data-theme="dark"] .year-divider-line {
-  background-color: rgba(255,255,255,0.12);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 /* Also support explicit theme attribute (some setups toggle data-theme) */
 html[data-theme="light"] .year-divider-line,
 body[data-theme="light"] .year-divider-line {
-  background-color: rgba(0,0,0,0.95);
+  background-color: rgba(0, 0, 0, 0.95);
 }
-
-

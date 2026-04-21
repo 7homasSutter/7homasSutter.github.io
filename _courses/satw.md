@@ -12,12 +12,12 @@ excerpt: ""
 nav: false
 ---
 
-I have been giving the module "Live Hacking" at the SATW TecDays since 2017. In this module, students learn about 
-the importance of cybersecurity and how to protect themselves online. They also get hands-on experience with 
+I have been giving the module "Live Hacking" at the SATW TecDays since 2017. In this module, students learn about
+the importance of cybersecurity and how to protect themselves online. They also get hands-on experience with
 ethical hacking techniques and tools, such as THC Hydra for password bruteforcing.
 
-
 ## SATW TecDays
-Since 2007, SATW has been organizing TecDays at Swiss middle schools. Over the course of a full day, students attend 
-hands-on, interactive modules of their choice, where they can engage with experts and explore topics and applications 
+
+Since 2007, SATW has been organizing TecDays at Swiss middle schools. Over the course of a full day, students attend
+hands-on, interactive modules of their choice, where they can engage with experts and explore topics and applications
 in science and technology. Since 2007, more than 70 different middle schools and a total of around 90,000 students have participated in a TecDay.

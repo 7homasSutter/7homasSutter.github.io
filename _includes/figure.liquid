@@ -1,4 +1,12 @@
-{% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | remove: '.webp' | remove: '.avif' %}
+{% assign img_path = include.path
+  | remove: '.jpg'
+  | remove: '.jpeg'
+  | remove: '.png'
+  | remove: '.tiff'
+  | remove: '.gif'
+  | remove: '.webp'
+  | remove: '.avif'
+%}
 
 <figure
   {% if include.slot %}
@@ -6,133 +14,155 @@
   {% endif %}
 >
   <div class="figure-zoom-wrapper" style="display:flex;justify-content:center;">
-  <picture>
-    <!-- Auto scaling with imagemagick -->
-    <!--
-      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
-      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
-    -->
-    {% if site.imagemagick.enabled %}
-      <source
-        class="responsive-img-srcset"
-        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
-        {% if include.sizes %}
-          sizes="{{include.sizes}}"
-        {% else %}
-          sizes="95vw"
+    <picture>
+      <!-- Auto scaling with imagemagick -->
+      <!--
+        See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
+        https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
+      -->
+      {% if site.imagemagick.enabled %}
+        <source
+          class="responsive-img-srcset"
+          srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+          {% if include.sizes %}
+            sizes="{{include.sizes}}"
+          {% else %}
+            sizes="95vw"
+          {% endif %}
+          type="image/webp"
+        >
+      {% endif %}
+      <img
+        src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+        {% if include.class %}
+          class="{{ include.class }}"
         {% endif %}
-        type="image/webp"
+        {% if include.width %}
+          width="{{ include.width }}"
+        {% endif %}
+        {% if include.height %}
+          height="{{ include.height }}"
+        {% endif %}
+        {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
+          style="
+            {% if include['min-width'] %}
+              min-width: {{ include.min-width }};
+            {% endif %}
+            {% if include['min-height'] %}
+              min-height: {{ include.min-height }};
+            {% endif %}
+            {% if include['max-width'] %}
+              max-width: {{ include.max-width }};
+            {% endif %}
+            {% if include['max-height'] %}
+              max-height: {{ include.max-height }};
+              /* ensure aspect ratio is preserved when max-height is set */
+              width: auto;
+              max-width: 100%;
+            {% endif %}
+          "
+        {% endif %}
+        {% if include.alt %}
+          alt="{{ include.alt }}"
+        {% endif %}
+        {% if include.title %}
+          title="{{ include.title }}"
+        {% endif %}
+        {% if include.zoomable %}
+          data-zoomable
+        {% endif %}
+        {% if include.loading %}
+          loading="{{ include.loading }}"
+        {% elsif site.lazy_loading_images %}
+          loading="lazy"
+        {% endif %}
+        onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
       >
-    {% endif %}
-    <img
-      src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
-      {% if include.class %}
-        class="{{ include.class }}"
-      {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% endif %}
-      {% if include.height %}
-        height="{{ include.height }}"
-      {% endif %}
-      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
-        style="
-          {% if include['min-width'] %}
-            min-width: {{ include.min-width }};
-          {% endif %}
-          {% if include['min-height'] %}
-            min-height: {{ include.min-height }};
-          {% endif %}
-          {% if include['max-width'] %}
-            max-width: {{ include.max-width }};
-          {% endif %}
-          {% if include['max-height'] %}
-            max-height: {{ include.max-height }};
-            /* ensure aspect ratio is preserved when max-height is set */
-            width: auto;
-            max-width: 100%;
-          {% endif %}
-        "
-      {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt }}"
-      {% endif %}
-      {% if include.title %}
-        title="{{ include.title }}"
-      {% endif %}
-      {% if include.zoomable %}
-        data-zoomable
-      {% endif %}
-      {% if include.loading %}
-        loading="{{ include.loading }}"
-      {% elsif site.lazy_loading_images %}
-        loading="lazy"
-      {% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
-    >
-  </picture>
+    </picture>
   </div>
 
   {% comment %} Initialize zoom modal and styles once per page. The guard ensures multiple includes don't duplicate markup/styles. {% endcomment %}
-  <script type="text/javascript">(function(){
-    if (typeof window.figureZoomInitialized !== 'undefined') return; window.figureZoomInitialized = true;
+  <script type="text/javascript">
+    (function () {
+      if (typeof window.figureZoomInitialized !== 'undefined') return;
+      window.figureZoomInitialized = true;
 
-    // Inject styles
-    var css = '\n      .figure-zoom-wrapper img[data-zoomable]{ cursor: zoom-in; }\n      #figure-zoom-modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.85); z-index:9999; }\n      #figure-zoom-modal.show{ display:flex; }\n      #figure-zoom-modal img{ max-width:95%; max-height:95%; box-shadow:0 10px 30px rgba(0,0,0,0.5); border-radius:4px; }\n      #figure-zoom-modal .figure-zoom-close{ position:absolute; top:18px; right:22px; color:#fff; font-size:28px; cursor:pointer; background:transparent; border:none; }\n    ';
-    var s = document.createElement('style'); s.appendChild(document.createTextNode(css)); document.head.appendChild(s);
+      // Inject styles
+      var css =
+        '\n      .figure-zoom-wrapper img[data-zoomable]{ cursor: zoom-in; }\n      #figure-zoom-modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.85); z-index:9999; }\n      #figure-zoom-modal.show{ display:flex; }\n      #figure-zoom-modal img{ max-width:95%; max-height:95%; box-shadow:0 10px 30px rgba(0,0,0,0.5); border-radius:4px; }\n      #figure-zoom-modal .figure-zoom-close{ position:absolute; top:18px; right:22px; color:#fff; font-size:28px; cursor:pointer; background:transparent; border:none; }\n    ';
+      var s = document.createElement('style');
+      s.appendChild(document.createTextNode(css));
+      document.head.appendChild(s);
 
-    // Create modal
-    var modal = document.createElement('div'); modal.id = 'figure-zoom-modal';
-    modal.innerHTML = '<button class="figure-zoom-close" aria-label="Close">\u00d7</button><img alt="zoomed image" />';
-    document.body.appendChild(modal);
+      // Create modal
+      var modal = document.createElement('div');
+      modal.id = 'figure-zoom-modal';
+      modal.innerHTML = '<button class="figure-zoom-close" aria-label="Close">\u00d7</button><img alt="zoomed image" />';
+      document.body.appendChild(modal);
 
-    var modalImg = modal.querySelector('img');
-    var btnClose = modal.querySelector('.figure-zoom-close');
+      var modalImg = modal.querySelector('img');
+      var btnClose = modal.querySelector('.figure-zoom-close');
 
-    function openModal(src, alt, title){
-      modalImg.src = src;
-      if(alt) modalImg.alt = alt; else modalImg.removeAttribute('alt');
-      if(title) modalImg.title = title; else modalImg.removeAttribute('title');
-      modal.classList.add('show');
-      // prevent page scroll
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.overflow = 'hidden';
-    }
+      function openModal(src, alt, title) {
+        modalImg.src = src;
+        if (alt) modalImg.alt = alt;
+        else modalImg.removeAttribute('alt');
+        if (title) modalImg.title = title;
+        else modalImg.removeAttribute('title');
+        modal.classList.add('show');
+        // prevent page scroll
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+      }
 
-    function closeModal(){
-      modal.classList.remove('show');
-      modalImg.src = '';
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
-    }
+      function closeModal() {
+        modal.classList.remove('show');
+        modalImg.src = '';
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+      }
 
-    // Close interactions
-    modal.addEventListener('click', function(e){ if(e.target === modal || e.target === btnClose) closeModal(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
-
-    // Attach to all zoomable images
-    function initZoomables(context){
-      var imgs = (context || document).querySelectorAll('img[data-zoomable]');
-      imgs.forEach(function(img){
-        // avoid duplicate listeners
-        if (img.dataset.figureZoomBound) return; img.dataset.figureZoomBound = '1';
-        img.addEventListener('click', function(){
-          // prefer original src if present via data-src or the actual src
-          var src = img.getAttribute('data-original') || img.getAttribute('data-src') || img.src;
-          openModal(src, img.alt, img.title);
-        });
+      // Close interactions
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal || e.target === btnClose) closeModal();
       });
-    }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
 
-    // Init on DOMContentLoaded
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ initZoomables(); }); else initZoomables();
+      // Attach to all zoomable images
+      function initZoomables(context) {
+        var imgs = (context || document).querySelectorAll('img[data-zoomable]');
+        imgs.forEach(function (img) {
+          // avoid duplicate listeners
+          if (img.dataset.figureZoomBound) return;
+          img.dataset.figureZoomBound = '1';
+          img.addEventListener('click', function () {
+            // prefer original src if present via data-src or the actual src
+            var src = img.getAttribute('data-original') || img.getAttribute('data-src') || img.src;
+            openModal(src, img.alt, img.title);
+          });
+        });
+      }
 
-    // Observe DOM for dynamically added figures (optional)
-    if ('MutationObserver' in window){
-      var mo = new MutationObserver(function(mutations){ mutations.forEach(function(m){ initZoomables(m.addedNodes && m.addedNodes[0]); }); });
-      mo.observe(document.documentElement || document.body, { childList:true, subtree:true });
-    }
-  })();</script>
+      // Init on DOMContentLoaded
+      if (document.readyState === 'loading')
+        document.addEventListener('DOMContentLoaded', function () {
+          initZoomables();
+        });
+      else initZoomables();
+
+      // Observe DOM for dynamically added figures (optional)
+      if ('MutationObserver' in window) {
+        var mo = new MutationObserver(function (mutations) {
+          mutations.forEach(function (m) {
+            initZoomables(m.addedNodes && m.addedNodes[0]);
+          });
+        });
+        mo.observe(document.documentElement || document.body, { childList: true, subtree: true });
+      }
+    })();
+  </script>
   {% if include.caption %}
     <figcaption class="caption">{{ include.caption }}</figcaption>
   {% endif %}

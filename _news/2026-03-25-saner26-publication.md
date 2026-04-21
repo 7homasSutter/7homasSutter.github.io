@@ -11,4 +11,3 @@ Dynamic analysis of Android’s application layer typically relies on physical d
 We evaluate our method on a collection of firmware samples from SDK 31–33. It achieves high build and boot success rates, with residual failures primarily occurring during core-service initialization due to baseline strategy limitations, missing dependencies, device-protection checks, or emulator constraints. However, the modular design allows injection strategies to be extended for specific firmware, supporting broader compatibility and future research on automated, adaptive re-hosting. Though we identified potential for optimization through engineering vendor-specific solutions, our research demonstrates the feasibility of vendor-flavoured emulators for scalable, reproducible dynamic analysis.
 
 More details, the paper PDF, and supplementary artifacts will be posted here when available.
-

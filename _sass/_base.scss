@@ -174,7 +174,9 @@ ul.task-list input[type="checkbox"] {
   border: 1px solid var(--global-divider-color);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 
   &:hover {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);

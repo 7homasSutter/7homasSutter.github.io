@@ -6,9 +6,11 @@ description: "Courses I teach or assist with"
 nav: true
 nav_order: 5
 ---
+
 {%- assign courses_sorted = site.courses | where_exp: "c", "c.published != false" | sort: 'year' | reverse -%}
 
 {%- for course in courses_sorted -%}
+
   <div class="course-item">
 	<h3 class="course-title"><a href="{{ course.url | relative_url }}">{{ course.title }}</a></h3>
 	<p class="course-subtitle">
@@ -19,14 +21,11 @@ nav_order: 5
 	  {% endif %}
 	</p>
 
-	{% if course.excerpt %}
-	  <p class="course-desc">{{ course.excerpt }}</p>
-	{% elsif course.description %}
-	  <p class="course-desc">{{ course.description }}</p>
-	{% endif %}
+    {% if course.excerpt %}
+      <p class="course-desc">{{ course.excerpt }}</p>
+    {% elsif course.description %}
+      <p class="course-desc">{{ course.description }}</p>
+    {% endif %}
+
   </div>
 {%- endfor -%}
-
-
-
-
