@@ -14,7 +14,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: Android security, software testing, mobile security, PhD student, University of Bern, ZHAW, security research, firmware analysis, phishing awareness, dynamic analysis, static analysis, information security, cybersecurity, software engineering
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🔐 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🧬 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://7homasSutter.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root

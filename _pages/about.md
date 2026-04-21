@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>📍 Zurich Area, Switzerland</p>
-    <p>🎓 <a href="https://www.unibe.ch" target="_blank">University of Bern</a></p>
+    <p>🎓 <a href="https://seg.inf.unibe.ch/" target="_blank">University of Bern</a></p>
     <p>🔬 <a href="https://www.zhaw.ch/en/engineering/institutes-centres/init/information-security/" target="_blank">ZHAW ISE Group</a></p>
 
 news: true # includes a list of news items
