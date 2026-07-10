@@ -8,7 +8,6 @@ tags: [publication, SANER26, Android, dynamic-analysis, emulation]
 
 {% include figure.liquid loading="eager" path="assets/img/news/2026_07_10/relocate_and_emulate.png" title="Re-Hosting Android's Application Layer" class="img-fluid rounded z-depth-1" %}
 
-
 Testing vendor-customized Android software has historically required an extensive, expensive inventory of physical
 smartphones, severely limiting the scalability and reproducibility of dynamic security analysis. To eliminate this
 hardware dependency, my colleagues from the University of Bern, Cyber-Defence Campus, ZHAW, and I introduced our new framework
