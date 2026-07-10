@@ -18,6 +18,7 @@ nav_order: 6
   {% endif %}
 
 {% if talk.link or talk.slides or talk.video %}
+
 <p class="talk-links">
 {% if talk.link %}
 <a class="talk-link" href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">Event</a>
