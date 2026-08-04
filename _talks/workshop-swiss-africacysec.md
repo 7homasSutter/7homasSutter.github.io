@@ -6,7 +6,7 @@ location: "Workshop for the Swiss-African Cybersecurity Community"
 permalink: /talks/security-and-privacy-android-phones/
 excerpt: "Overview of privacy and security issues on Android devices and recommendations for users and administrators."
 link: "https://www.fhnw.ch/plattformen/swissafricacysec/cyber-resilience-and-incident-response-in-africas-digital-economy-2/"
-slides: "https://www.fhnw.ch/plattformen/swissafricacysec/cyber-resilience-and-incident-response-in-africas-digital-economy-2/"
+slides: "../assets/img/pdf/presentations/2025_07_01_UninstallableByDesign.pdf"
 ---
 
 {% include figure.liquid loading="eager" path="../assets/img/projects/WorkshopUniBern.png" title="WorkshopUniBern" class="img-fluid rounded z-depth-1" %}

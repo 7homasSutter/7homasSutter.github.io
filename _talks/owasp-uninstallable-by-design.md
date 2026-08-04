@@ -6,7 +6,7 @@ location: "OWASP Switzerland Chapter Meeting"
 permalink: /talks/uninstallable-by-design/
 excerpt: "The role of pre-installed apps in Android's security landscape and why some apps cannot be removed easily."
 link: "https://www.meetup.com/owaspswitzerland/"
-slides: "https://github.com/7homasSutter/public-slides/tree/main"
+slides: "../assets/img/pdf/presentations/2025_02_19_OWASP_ChapterSwitzerland.pdf"
 ---
 
 {% include figure.liquid loading="eager" path="../assets/img/projects/OWASP_Flyer.avif" title="OWASP Chapter Meeting" class="img-fluid rounded z-depth-1" %}
