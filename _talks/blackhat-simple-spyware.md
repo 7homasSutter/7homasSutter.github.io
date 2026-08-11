@@ -9,7 +9,7 @@ video: "https://youtu.be/EuInUW77CPo?feature=shared"
 link: "https://blackhat.com/eu-19/"
 ---
 
-{% include figure.liquid loading="eager" path="../assets/img/projects/blackhatlogo2019.jpg" title="WorkshopUniBern" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="../assets/img/projects/blackhatlogo2019.png" title="WorkshopUniBern" class="img-fluid rounded z-depth-1" %}
 
 ## Ressources:
 
