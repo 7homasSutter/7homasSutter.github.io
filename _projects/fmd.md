@@ -13,6 +13,14 @@ project focuses on automating the end-to-end process of extracting pre-installed
 and framework artifacts from device firmware images, preparing them for static and dynamic security analysis, and providing
 reproducible pipelines and artifacts for researchers.
 
+### Tools and latest release
+
+The [FirmwareDroid tools documentation](https://firmwaredroid.github.io/) covers the current tools and how to get started.
+The latest release, [2026.10.23](https://github.com/FirmwareDroid/FirmwareDroid/releases/tag/2026.10.23), includes:
+
+- An updated frontend and UI screen enhancements.
+- An initialization script added to the packages.
+
 ### Project goals
 
 - Automate extraction of Android firmware components (system apps, framework libraries, vendor blobs) across many devices and OEM firmware formats.
