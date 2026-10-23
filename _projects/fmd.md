@@ -8,7 +8,7 @@ category: work
 related_publications: false
 ---
 
-FirmwareDroid is a research project (see [https://firmwaredroid.github.io/](https://firmwaredroid.github.io/) covers the current tools and how to get started.) that develops novel methods and tooling to analyze Android firmware at scale. The
+[FirmwareDroid](https://firmwaredroid.github.io/) is a research project (see [https://firmwaredroid.github.io/](https://firmwaredroid.github.io/) covers the current tools and how to get started.) that develops novel methods and tooling to analyze Android firmware at scale. The
 project focuses on automating the end-to-end process of extracting pre-installed (vendor / system) Android applications
 and framework artifacts from device firmware images, preparing them for static and dynamic security analysis, and providing
 reproducible pipelines and artifacts for researchers.
