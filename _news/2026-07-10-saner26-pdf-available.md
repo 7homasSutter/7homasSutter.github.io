@@ -4,6 +4,8 @@ date: 2026-07-10
 layout: post
 categories: news
 tags: [publication, SANER26, Android, dynamic-analysis, emulation]
+img: assets/img/news/2026_07_10/relocate_and_emulate.png
+description: "Full paper and replication package now publicly available for Relocate and Emulate, our framework for re-hosting vendor-customized Android firmware into scalable AOSP emulators."
 ---
 
 {% include figure.liquid loading="eager" path="assets/img/news/2026_07_10/relocate_and_emulate.png" title="Re-Hosting Android's Application Layer" class="img-fluid rounded z-depth-1" %}

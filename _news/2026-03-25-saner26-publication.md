@@ -4,7 +4,11 @@ date: 2026-03-25
 layout: post
 categories: news
 tags: [publication, SANER26, Android, dynamic-analysis, emulation]
+img: assets/img/news/2026_03_25/saner26_presentation.png
+description: "Presented our SANER 2026 research on systematically relocating proprietary Android framework components and pre-installed apps from real device firmware into emulated AOSP environments."
 ---
+
+{% include figure.liquid loading="eager" path="assets/img/news/2026_03_25/saner26_presentation.png" title="Relocate and Emulate at SANER 2026" class="img-fluid rounded z-depth-1" %}
 
 Dynamic analysis of Android’s application layer typically relies on physical devices, limiting scalability and reproducibility. To compensate, we introduce a systematic re-hosting method that relocates the Android framework and pre-installed software from real device firmware into a fully emulated environment. Our approach integrates vendor-specific components into the Android Open Source Project (AOSP) build system using tailored extraction and injection strategies, producing vendor-flavoured emulator images that preserve system integrity and runtime compatibility. This enables dynamic execution of real-world framework and application-layer components, including proprietary binaries and pre-installed apps, across multiple SDK versions.
 

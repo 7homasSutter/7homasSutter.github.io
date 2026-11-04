@@ -1,33 +1,115 @@
 <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
-    <div
-      class="table-responsive"
-      {% if include.limit and site.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
-      {% endif %}
-    >
-      <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
-        {% if include.limit and site.announcements.limit %}
-          {% assign news_limit = site.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
+    {% assign news = site.news | reverse %}
+    {% if include.limit and site.announcements.limit %}
+      {% assign news_limit = site.announcements.limit %}
+    {% else %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+
+    {% if include.limit %}
+      <div
+        class="table-responsive"
+        {% if site.announcements.scrollable and news_size > 3 %}
+          style="max-height: 60vw"
         {% endif %}
+      >
+        <table class="table table-sm table-borderless">
+          {% for item in news limit: news_limit %}
+            <tr>
+              <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+              <td>
+                {% if item.inline %}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    {% else %}
+      <div class="news-cards">
         {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% assign thumb_path = item.img | default: item.thumbnail %}
+          <article class="news-card card">
+            <div class="news-card-inner">
+              {% if thumb_path %}
+                {% if item.inline %}
+                  <div class="news-card-thumb{% if item.img_fit == 'contain' %} news-card-thumb-contain{% endif %}">
+                    {%
+                      include figure.liquid
+                      loading="eager"
+                      path=thumb_path
+                      sizes="(min-width: 576px) 240px, 95vw"
+                      alt=item.title
+                      class="news-thumb-img"
+                    %}
+                  </div>
+                {% else %}
+                  <a
+                    href="{{ item.url | relative_url }}"
+                    class="news-card-thumb{% if item.img_fit == 'contain' %} news-card-thumb-contain{% endif %}"
+                    aria-label="{{ item.title }}"
+                  >
+                    {%
+                      include figure.liquid
+                      loading="eager"
+                      path=thumb_path
+                      sizes="(min-width: 576px) 240px, 95vw"
+                      alt=item.title
+                      class="news-thumb-img"
+                    %}
+                  </a>
+                {% endif %}
               {% endif %}
-            </td>
-          </tr>
+
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <time class="news-card-date" datetime="{{ item.date | date: '%Y-%m-%d' }}">
+                    <i class="fa-regular fa-calendar"></i>
+                    {{ item.date | date: '%b %d, %Y' }}
+                  </time>
+                </div>
+
+                {% if item.inline %}
+                  <div class="news-card-inline">
+                    {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  </div>
+                {% else %}
+                  <h2 class="news-card-title">
+                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  </h2>
+                  {% if item.description %}
+                    <p class="news-card-excerpt">{{ item.description }}</p>
+                  {% else %}
+                    {% assign fallback_excerpt = item.content | split: '</script>' | last | strip_html | strip_newlines | truncatewords: 36 %}
+                    {% if fallback_excerpt != '' %}
+                      <p class="news-card-excerpt">{{ fallback_excerpt }}</p>
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+
+                <div class="news-card-footer">
+                  {% if item.tags and item.tags != empty %}
+                    <div class="news-card-tags">
+                      {% for tag in item.tags %}
+                        <span class="news-tag">#{{ tag }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  {% unless item.inline %}
+                    <a class="news-read-more" href="{{ item.url | relative_url }}"> Read article <i class="fa-solid fa-arrow-right"></i> </a>
+                  {% endunless %}
+                </div>
+              </div>
+            </div>
+          </article>
         {% endfor %}
-      </table>
-    </div>
+      </div>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}

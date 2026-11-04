@@ -4,7 +4,11 @@ date: 2026-09-21
 layout: post
 categories: news
 tags: [publication, CCS26, Android, dynamic-analysis, emulation, doctoral-symposium]
+img: assets/img/news/2026_09_21/ccs26_doctoral_symposium.png
+description: "Accepted at the 33rd ACM Conference on Computer and Communications Security (CCS 2026) Doctoral Symposium in The Hague for research on automated system-level re-hosting and security auditing of Android firmware."
 ---
+
+{% include figure.liquid loading="eager" path="assets/img/news/2026_09_21/ccs26_doctoral_symposium.png" title="Automated System-Level Re-Hosting for Android Firmware Auditing" class="img-fluid rounded z-depth-1" %}
 
 My paper, "Systematic Security and Privacy Auditing of the Android Ecosystem via Automated System-Level Re-Hosting," has been accepted at the Doctoral Symposium
 of the [33rd ACM Conference on Computer and Communications Security](https://www.sigsac.org/ccs/CCS2026/index.html) (CCS 2026), held in The Hague, Netherlands.

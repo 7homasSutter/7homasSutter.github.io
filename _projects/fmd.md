@@ -13,7 +13,6 @@ project focuses on automating the end-to-end process of extracting pre-installed
 and framework artifacts from device firmware images, preparing them for static and dynamic security analysis, and providing
 reproducible pipelines and artifacts for researchers.
 
-
 ### Project goals
 
 - Automate extraction of Android firmware components (system apps, framework libraries, vendor blobs) across many devices and OEM firmware formats.
